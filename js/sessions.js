@@ -87,13 +87,14 @@ class Sessions {
 	}
 
 	_init() {
+    const fixSession = session => Object.assign({}, session, {key: session.key.replace("none+", "")});
 		if (!lightdm) {
 			lightdm.onload = function() {
-				this._sessionsObject = lightdm.sessions;
+				this._sessionsObject = lightdm.sessions.map(fixSession);
 				this._populateSessionsList();
 			};
 		} else {
-			this._sessionsObject = lightdm.sessions;
+			this._sessionsObject = lightdm.sessions.map(fixSession);
 			this._populateSessionsList();
 		}
 	}
