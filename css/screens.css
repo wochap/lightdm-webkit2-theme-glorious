@@ -95,8 +95,8 @@
 }
 
 #screen-greeter.screen-greeter-hide {
-	top: -100%;
 	pointer-events: none;
+  opacity: 0;
 }
 
 #screen-greeter-content-parent.screen-content-parent {

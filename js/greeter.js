@@ -6,7 +6,8 @@ class GreeterScreen {
 		this._arrowIndicatorGreeter = document.querySelector('#arrow-indicator-greeter');
 		this._screenGreeterVisible = true;
 		this._buttonGreeterClickEvent();
-		this._arrowIndicatorClickEvent();
+		this._screenGretterClickEvent();
+		// this._arrowIndicatorClickEvent();
 	}
 
 	getGreeterVisibility() {
@@ -18,6 +19,15 @@ class GreeterScreen {
 			'click',
 			() => {
 				this._showGreeter();
+			}
+		);
+	}
+
+	_screenGretterClickEvent() {
+		this._screenGreeter.addEventListener(
+			'click',
+			() => {
+				this._hideGreeter();
 			}
 		);
 	}

@@ -66,7 +66,8 @@ class Power {
 			'click',
 			() => {
 				this._disableWindowPropagation();
-				goodbye.showGoodbye(powerObj.icon, powerObj.message);
+				// goodbye.showGoodbye(powerObj.icon, powerObj.message);
+				goodbye.showGoodbye(powerObj.icon, "");
 				this._executePowerCallback(powerObj.powerCommand);
 			}
 		);
@@ -80,7 +81,8 @@ class Power {
 			const powerName = this._powerObject[parseInt(i, 10)].name;
 			const powerCommand =  this._powerObject[parseInt(i, 10)].powerCommand;
 			const powerIcon = this._powerObject[parseInt(i, 10)].icon;
-			const powerMessage = this._powerObject[parseInt(i, 10)].message;
+			// const powerMessage = this._powerObject[parseInt(i, 10)].message;
+			const powerMessage = "";
 			let powerItemButton = document.createElement('button');
 			powerItemButton.className = 'button-sidebar-list-item';
 			powerItemButton.id = `button-sessions-item-${powerName.toLowerCase()}`;

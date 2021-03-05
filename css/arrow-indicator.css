@@ -6,6 +6,9 @@
 	bottom: 10px;
 	left: 50%;
 	transform: translate(-50%, -50%) rotate(-135deg);
+
+  /* Hide arrow indicator */
+  opacity: 0;
 }
 
 .arrow-indicator span {
